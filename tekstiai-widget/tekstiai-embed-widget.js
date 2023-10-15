@@ -6808,7 +6808,7 @@ const Qp = async (e, t, n, r, l) => {
       l(s), u += s;
     },
     o
-  ), { content: u, references: i.qa_pairs[0].references };
+  ), { content: u, references: i.qa_pairs[i.qa_pairs.length - 1].references };
 };
 function Hp({ apiKey: e }) {
   const [t, n] = $.useState(""), [r, l] = $.useState(!1), [o, i] = $.useState(""), [u, s] = $.useState(""), [c, m] = $.useState([]), [h, p] = $.useState([]), g = $.useRef(null), w = $.useRef(null);
@@ -6843,7 +6843,7 @@ function Hp({ apiKey: e }) {
       }
     ]);
   };
-  return /* @__PURE__ */ P.jsxs("div", { className: "embed flex flex-col flex-1 overflow-auto w-full h-full p-5", children: [
+  return /* @__PURE__ */ P.jsxs("div", { className: "embed flex flex-col flex-1 overflow-auto w-full h-full p-5 bg-white", children: [
     /* @__PURE__ */ P.jsx(
       Up,
       {
