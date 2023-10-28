@@ -18,10 +18,28 @@
     ></script>
     <script type="module">
       import { renderTekstiaiWidget } from "./tekstiai-widget/tekstiai-embed-widget.js";
-
       renderTekstiaiWidget(
         document.getElementById("tekstiai-embed-widget"),
-        "TA-rZl6HgtHp2gjKTY53zDtc1HnmBEaj"
+        {
+            api: {
+                apiKey: "TA-rZl6HgtHp2gjKTY53zDtc1HnmBEaj",
+                apiUrl: "https://develop.teksti.ai/api/embed",
+            },
+            styles: {
+                buttonBackgroundColor: "#0e535a",
+                buttonTextColor: "#ffffff",
+                buttonBorderColor: "#0e535a",
+                buttonText: "Lähetä",
+                answerAvatarBackgroundColor: "#0e535a",
+                answerAvatarTextColor: "#ffffff",
+                answerAvatarText: "Fondia",
+                questionAvatarText: "Sinä",
+                avatarWidth: "40px",
+                copyButtonText: "Kopioi",
+                referenceButtonText: "Näytä viittaukset",
+                inputPlaceholderText: "Kirjoita kysymyksesi tähän",
+            }
+        }
       );
     </script>
   </body>
