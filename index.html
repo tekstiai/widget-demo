@@ -4,43 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TekstiAI Widget Demo</title>
-    <link rel="stylesheet" href="./tekstiai-widget/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://tekstiai.blob.core.windows.net/widget/tekstiai-embed-widget-v0.9.0.css"
+    />
   </head>
-  <body style="height: 100vh; background-color: #d3d3d3;">
-    <div style="width: 100%; display: flex; flex-direction: column; justify-content:space-between; align-items: center; gap: 50px; margin-top: 100px;">
-      <h1 style="font-size: larger; font-weight: bold;">TekstiAI widget demo</h1>
-      <div id="tekstiai-embed-widget" style="width: 800px; height: 600px; background-color: #FFF; border-radius: 10px;"></div>
+  <body style="height: 100vh; background-color: #d3d3d3">
+    <div
+      style="
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        margin-top: 100px;
+      "
+    >
+      <h1 style="font-size: larger; font-weight: bold">TekstiAI widget demo</h1>
+      <div
+        id="tekstiai-embed-widget"
+        style="
+          width: 800px;
+          height: 600px;
+          background-color: #fff;
+          border-radius: 10px;
+        "
+      ></div>
     </div>
-    <script
-      type="module"
-      src="./tekstiai-widget/tekstiai-embed-widget.js"
-      defer
-    ></script>
     <script type="module">
-      import { renderTekstiaiWidget } from "./tekstiai-widget/tekstiai-embed-widget.js";
-      renderTekstiaiWidget(
-        document.getElementById("tekstiai-embed-widget"),
-        {
-            api: {
-                apiKey: "TA-rZl6HgtHp2gjKTY53zDtc1HnmBEaj",
-                apiUrl: "https://develop.teksti.ai/api/embed",
-            },
-            styles: {
-                buttonBackgroundColor: "#0e535a",
-                buttonTextColor: "#ffffff",
-                buttonBorderColor: "#0e535a",
-                buttonText: "Lähetä",
-                answerAvatarBackgroundColor: "#0e535a",
-                answerAvatarTextColor: "#ffffff",
-                answerAvatarText: "Fondia",
-                questionAvatarText: "Sinä",
-                avatarWidth: "40px",
-                copyButtonText: "Kopioi",
-                referenceButtonText: "Näytä viittaukset",
-                inputPlaceholderText: "Kirjoita kysymyksesi tähän",
-            }
-        }
-      );
+      import { renderTekstiaiWidget } from "https://tekstiai.blob.core.windows.net/widget/tekstiai-embed-widget-v0.9.0.js";
+      renderTekstiaiWidget(document.getElementById("tekstiai-embed-widget"), {
+        api: {
+          apiKey: "TA-rZl6HgtHp2gjKTY53zDtc1HnmBEaj",
+          apiUrl: "https://develop.teksti.ai/api/embed",
+        },
+        styles: {
+          buttonBackgroundColor: "#0e535a",
+          buttonTextColor: "#ffffff",
+          buttonBorderColor: "#0e535a",
+          buttonText: "Lähetä",
+          answerAvatarBackgroundColor: "#0e535a",
+          answerAvatarTextColor: "#ffffff",
+          answerAvatarText: "Fondia",
+          questionAvatarText: "Sinä",
+          avatarWidth: "40px",
+          copyButtonText: "Kopioi",
+          referenceButtonText: "Näytä viittaukset",
+          inputPlaceholderText: "Kirjoita kysymyksesi tähän",
+        },
+      });
     </script>
   </body>
 </html>
