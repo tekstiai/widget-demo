@@ -1,19 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Tekstiai Widget Test" />
+    <title>Tekstiai Widget Test</title>
+    <style>
+      body {
+        font-family: "Jacquarda Bastarda 9", serif;
+        font-weight: 400;
+        font-style: normal;
+        background-color: #fcf5e5;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+      .my-class {
+        color: red;
+        padding: 20px;
+      }
+    </style>
   </head>
-  <body style="height: 100vh; background-color: #d3d3d3">
-    test
-    <div style="width:600px; height:400px">
+  <body>
+    <h1>Wempain</h1>
+    <div style="width: 600px; height: 400px">
       <tekstiai-widget
-      api-key="TA-y99JM1PN7_rmvE_Q1gF9QawWeC-4K"
-      api-url="https://dev.teksti.ai/api/embed"
-      options-validate-input="true"
+        api-key="TA-y99JM1PN7_rmvE_Q1gF9QawWeC-4K"
+        api-url="https://dev.teksti.ai/api/embed"
+        options-validate-input="true"
       ></tekstiai-widget>
-      <script src="https://cdn.teksti.ai/widget/tekstiai-embed-widget-v0.9.9.js"></script>
     </div>
+    <h2>Toinen wempain</h2>
+    <script src="https://cdn.teksti.ai/widget/tekstiai-embed-widget-v0.9.9.js"></script>
+    <div
+      id="tekstiai-embed-widget"
+      style="
+        width: 800px;
+        height: 600px;
+        background-color: #fff;
+        border-radius: 10px;
+      "
+    ></div>
+    <script type="module">
+      import { renderTekstiaiWidget } from "https://cdn.teksti.ai/widget/tekstiai-embed-widget-v0.9.8.js";
+      renderTekstiaiWidget(document.getElementById("tekstiai-embed-widget"), {
+        api: {
+          apiKey: "TA-y99JM1PN7_rmvE_Q1gF9QawWeC-4K",
+          apiUrl: "https://dev.teksti.ai/api/embed",
+        },
+        options: {
+          maxLength: 360,
+          buttonText: "Lähetä",
+          answerAvatarText: "F",
+          questionAvatarText: "Sinä",
+          copyButtonText: "Kopioi",
+          referenceButtonText: "Näytä viittaukset",
+          inputPlaceholderText: "Kirjoita kysymyksesi tähän",
+        },
+        styles: {
+          buttonBackgroundColor: "#0e535a",
+          buttonTextColor: "#ffffff",
+          buttonBorderColor: "#0e535a",
+          answerAvatarBackgroundColor: "#0e535a",
+          answerAvatarTextColor: "#ffffff",
+          avatarWidth: "40px",
+        },
+      });
+    </script>
   </body>
 </html>
